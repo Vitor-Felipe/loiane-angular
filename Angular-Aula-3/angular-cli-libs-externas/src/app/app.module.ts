@@ -4,14 +4,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
-import { TestComponent } from './test/test.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiretivaNgifComponent,
-    TestComponent
+    DiretivaNgifComponent
   ],
   imports: [
     BrowserModule

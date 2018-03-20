@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [class.active]="aba == 'vitor'" (click)="aba = 'vitor'" >Vitor</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" [class.active]="aba == 'home'" (click)="aba = 'home'" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="aba == 'link'" (click)="aba = 'link'" >Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="aba == 'lista'" (click)="aba = 'lista'" >lista</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase="'link'">Modo Link Ativado</p>
+  <p *ngSwitchCase="'lista'">Modo Lista Ativado</p>
+  <p *ngSwitchDefault>Home</p>
+</div>
