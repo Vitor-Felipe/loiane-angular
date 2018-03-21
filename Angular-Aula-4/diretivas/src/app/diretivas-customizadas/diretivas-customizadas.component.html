@@ -10,6 +10,16 @@
   Texto com highlight quando passar o mouse.
 </p> -->
 
-<p highlight [defaultColor]="'grey'" [highlightColor]="'red'" >
+<!-- <p highlight [defaultColor]="'grey'" [highlightColor]="'red'" >
     Texto com highlight com cores customizadas.
-  </p>
+  </p> -->
+
+  <div *ngIf="mostrarCursos" >
+      Lista de cursos aqui.
+    </div>
+    <div *ngIf="!mostrarCursos" >
+      Não existem cursos para serem listados.
+    </div>
+    
+    <br>
+    <button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
